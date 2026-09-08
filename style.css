@@ -76,6 +76,24 @@ body::before {
   box-shadow: 0 12px 28px -10px rgba(124, 92, 255, .55);
 }
 
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  border-color: var(--bg-glow-2);
+  box-shadow: none;
+}
+
 .services {
   position: relative;
   max-width: 480px;
@@ -131,17 +149,27 @@ body::before {
 }
 
 .work-card {
+  display: block;
   text-align: left;
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s, border-color .15s;
+}
+
+a.work-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--bg-glow-2);
 }
 
 .work-card h3 {
   margin: 0 0 8px;
   font-size: 1.05rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .work-card p {
